@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legendary Form</title>
+</head>
+<body>
+  <form id="login-form">
+    <label for="">Username:</label><br>
+    <input type="text" id="username" name="somename"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <button id="login-button" type="submit">Login</button>
+  </form>
+  
+
+
+  <style>
+    #login-form{
+      width: 300px;
+
+      margin: auto;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    #login-form label{
+      display: block;
+      margin-bottom: 10px;
+    }
+    #login-form input{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #login-button {
+      width: 80%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border:  none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+    }
+    #login-button:hover{
+      background-color: #45a049;
+    }
+    
+  </style>
+  <script>
+    const loginButton = document.getElementById('login-button');
+    let hoverCount = 0;
+    loginButton.addEventListener('mouseenter',()=>{
+      hoverCount++;
+      if (hoverCount >=15){
+        //
+      }
+      else{
+        const x = Math.floor(Math.random()*650)
+        const y = Math.floor(Math.random()*650)
+        loginButton.style.top = x + 'px'
+
+        loginButton.style.left = y + 'px'
+      }
+    })
+    loginButton.addEventListener('click',()=>{
+      alert("You are a legend!")
+    })
+  </script>
+  
+</body>
+</html>
